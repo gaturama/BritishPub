@@ -1,0 +1,5 @@
+C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.AssemblyReference.cache
+C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfoInputs.cache
+C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfo.cs
+C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.CoreCompileInputs.cache
