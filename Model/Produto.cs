@@ -1,48 +1,84 @@
 using System;
+using System.Collections.Generic;
 
 namespace Model
 {
+    public interface IProdutoRepository
+    {
+        void SalvarProduto(Produto produto);
+        void ExcluirProduto(int produtoId);
+        Produto BuscarProduto(int produtoId);
+        List<Produto> ListarProdutos();
+    }
+
     public class Produto
     {
-        public int ProdutoId { get; set; }
-        public string Nome { get; set; }
-
-        public static List<Produto> Produtos {get; set; } = new List<Produto>();
+        public int ProdutoId { get; private set; }
+        public string Nome { get; private set; }
 
         public Produto(int produtoId, string nome)
         {
             ProdutoId = produtoId;
             Nome = nome;
+        }
 
-            Produto.Add(this);
+        public void AlterarProduto(int ProdutoId, string nome)
+        {
+            ProdutoId = produtoId;
+            Nome = nome;
         }
 
         public override string ToString()
         {
             return $"Id: {ProdutoId}, Nome: {Nome}";
         }
+    }
 
-        public static void AlterarProduto(int produtoId, string nome)
+    public class ProdutoRepository : IProdutoRepository
+    {
+        private List<Produto> Produtos { get; set; } = new List<Produto>();
+
+        public void SalvarProduto(Produto produto)
         {
-            Produto produto = BuscarProduto(produtoId);
-            produto.Nome = nome;
+            if (produto == null)
+            {
+                throw new ArgumentNullException(nameof(produto));
+            }
+
+            var produtoExistente = Produtos.Find(p => p.ProdutoId == produto.ProdutoId);
+            if (produtoExistente != null)
+            {
+                Produtos.Remove(produtoExistente);
+            }
+
+            Produtos.Add(produto);
         }
 
-        public static void ExcluirProduto(int produtoId)
+        public void ExcluirProduto(int produtoId)
         {
-            Produto produto = BuscarProduto(produtoId);
+            var produto = Produtos.Find(p => p.ProdutoId == produtoId);
+            if (produto == null)
+            {
+                throw new Exception("Produto não encontrado");
+            }
+
             Produtos.Remove(produto);
         }
 
-        public static Produto BuscarProduto(int produtoId)
+        public Produto BuscarProduto(int produtoId)
         {
-            Produto? produto = Produtos.Find(c => c.ProdutoId == produtoId);
-            if(produto == null)
+            var produto = Produtos.Find(p => p.ProdutoId == produtoId);
+            if (produto == null)
             {
                 throw new Exception("Produto não encontrado");
             }
 
             return produto;
+        }
+
+        public List<Produto> ListarProdutos()
+        {
+            return Produtos;
         }
     }
 }

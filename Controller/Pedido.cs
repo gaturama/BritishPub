@@ -1,54 +1,96 @@
 namespace Controller
 {
-    public class Pedido
+    public interface IPedidoInputPort
     {
-        public static void CadastrarPedido(string PedidoId, string Descricao, string Cliente)
+        void CadastrarPedido(string pedidoId, string descricao, string cliente);
+        void AlterarPedido(string pedidoId, string descricao, string cliente);
+        void ExcluirPedido(string pedidoId);
+        Model.Pedido BuscarPedido(string pedidoId);
+        List<Model.Produto> ListarPedidos();
+    }
+
+    public class PedidoController : IPedidoInputPort
+    {
+        private readonly Model.IPedidoRepository _pedidoRepository
+        private readonly IPedidoOutputPort _pedidoOutputPort;
+
+        public PedidoController(IPedidoOutputPort pedidoOutputPort, IPedidoRepository PedidoRepository)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(PedidoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
-            }
-            Model.Pedido pedido = new Model.Pedido(idConvert, Descricao, Cliente);
+            _pedidoRepository = PedidoRepository;
+            _pedidoOutputPort = pedidoOutputPort;
         }
 
-        public static void AlterarPedido(string PedidoId, string Descricao, string Cliente)
+        public void CadastrarPedido(string pedidoId, string descricao, string cliente)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(PedidoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(pedidoId);
+                Model.Pedido pedido = new Model.Pedido(idConvert, descricao, cliente);
+                _pedidoRepository.SalvarPedido(pedido);
+                _pedidoOutputPort.PedidoCadastradoComSucesso();
             }
-            Model.Pedido.AlterarPedido(idConvert, Descricao, Cliente);
+            catch (Exception e)
+            {
+                _pedidoOutputPort.ErroAoCadastrarPedido(e.Message);
+            }
         }
 
-        public static void ExcluirPedido(string PedidoId)
+        public void AlterarPedido(string pedidoId, string descricao, string cliente)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(PedidoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(pedidoId);
+                Model.Pedido pedido = _pedidoRepository.BuscarPedido(idConvert);
+                if(pedido == null)
+                {
+                    throw new Exception("Pedido não encontrado");
+                }
+                Produto.AlterarPedido(pedidoId, descricao, cliente);
+                _pedidoRepository.SalvarPedido(pedido);
+                _pedidoOutputPort.PedidoAlteradoComSucesso();
             }
-            Model.Pedido.ExcluirPedido(idConvert);
+            catch (Exception e)
+            {
+                _pedidoOutputPort.ErroAoAlterarPedido(e.Message);
+            }
         }
 
-        public static Model.Pedido BuscarPedido(string PedidoId)
+        public void ExcluirPedido(string pedidoId)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(PedidoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(pedidoId);
+                Model.Pedido pedido = _pedidoRepository.BuscarPedido(idConvert);
+                if(pedido == null)
+                {
+                    throw new Exception("Pedido não encontrado")
+                }
+                _pedidoRepository.ExcluirPedido(idConvert);
+                _pedidoOutputPort.PedidoExcluidoComSucesso();
             }
-            return Model.Pedido.BuscarPedido(idConvert);
+            catch (Exception e)
+            {
+                _pedidoOutputPort.ErroAoExcluirPedido(e.Message);
+            }
         }
 
-        public static List<Model.Pedido> ListarPedidos()
+        public Model.Pedido BuscarPedido(string pedidoId)
         {
-            return Model.Pedido.Pedidos;
+            try
+            {
+                int idConvert = int.Parse(pedidoId);
+                return _pedidoRepository.BuscarProduto(idConvert);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Id inválido: " + e.Message);
+            }
+        }
+
+
+        public List<Model.Pedido> ListarPedidos()
+        {
+            return _pedidoRepository.ListarPedidos();
         }
     }
 }

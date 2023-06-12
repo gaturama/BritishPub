@@ -1,54 +1,97 @@
 namespace Controller
 {
-    public class Produto
+    public interface IProdutoInputPort
     {
-        public static void CadastrarProduto(string ProdutoId, string Nome)
+        void CadastrarProduto(string produtoId, string nome);
+        void AlterarProduto(string produtoId, string nome);
+        void ExcluirProduto(string produtoId);
+        Model.Produto BuscarProduto(string produtoId);
+        List<Model.Produto> ListarProdutos();
+    }
+
+    public class ProdutoController : IProdutoInputPort
+    {
+        private readonly Model.IProdutoRepository _produtoRepository;
+        private readonly IProdutoOutputPort _produtoOutputPort;
+
+        public ProdutoController(Model.IProdutoRepository produtoRepository, IProdutoOutputPort produtoOutputPort)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(ProdutoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
-            }
-            Model.Produto produto = new Model.Produto(idConvert, Nome);
+            _produtoRepository = produtoRepository;
+            _produtoOutputPort = produtoOutputPort;
         }
 
-        public static void AlterarProduto(string ProdutoId, string Nome)
+        public void CadastrarProduto(string produtoId, string nome)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(ProdutoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(produtoId);
+                Model.Produto produto = new Model.Produto(idConvert, nome);
+                _produtoRepository.SalvarProduto(produto);
+                _produtoOutputPort.ProdutoCadastradoComSucesso();
             }
-            Model.Produto.AlterarProduto(idConvert, Nome);
+            catch (Exception e)
+            {
+                _produtoOutputPort.ErroAoCadastrarProduto(e.Message);
+            }
         }
 
-        public static void ExcluirProduto(string ProdutoId)
+        public void AlterarProduto(string produtoId, string nome)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(ProdutoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(produtoId);
+                Model.Produto produto = _produtoRepository.BuscarProduto(idConvert);
+                if (produto == null)
+                {
+                    throw new Exception("Produto não encontrado");
+                }
+
+                produto.AlterarProduto(produtoId, nome);
+                _produtoRepository.SalvarProduto(produto);
+                _produtoOutputPort.ProdutoAlteradoComSucesso();
             }
-            Model.Produto.ExcluirProduto(idConvert);
+            catch (Exception e)
+            {
+                _produtoOutputPort.ErroAoAlterarProduto(e.Message);
+            }
         }
 
-        public static Model.Produto BuscarProduto(string ProdutoId)
+        public void ExcluirProduto(string produtoId)
         {
-            int idConvert = 0;
-            try{
-                idConvert = int.Parse(ProdutoId);
-            }catch(Exception){
-                throw new Exception("Id inválido");
+            try
+            {
+                int idConvert = int.Parse(produtoId);
+                Model.Produto produto = _produtoRepository.BuscarProduto(idConvert);
+                if (produto == null)
+                {
+                    throw new Exception("Produto não encontrado");
+                }
+
+                _produtoRepository.ExcluirProduto(idConvert);
+                _produtoOutputPort.ProdutoExcluidoComSucesso();
             }
-            return Model.Produto.BuscarProduto(idConvert);
+            catch (Exception e)
+            {
+                _produtoOutputPort.ErroAoExcluirProduto(e.Message);
+            }
         }
 
-        public static List<Model.Produto> ListarProdutos()
+        public Model.Produto BuscarProduto(string produtoId)
         {
-            return Model.Produto.Produtos;
+            try
+            {
+                int idConvert = int.Parse(produtoId);
+                return _produtoRepository.BuscarProduto(idConvert);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Id inválido: " + e.Message);
+            }
+        }
+
+        public List<Model.Produto> ListarProdutos()
+        {
+            return _produtoRepository.ListarProdutos();
         }
     }
 }

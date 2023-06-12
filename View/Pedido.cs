@@ -1,58 +1,104 @@
 namespace View
 {
-    public class Pedido
+    public interface IPedidoInputPort
     {
-        public static void CadastrarPedido()
+        void CadastrarPedido();
+        void AlterarPedido();
+        void ExcluirPedido();
+        void ListarPedidos();
+    }
+
+    public interface IPedidoOutputPort
+    {
+        void PedidoCadastradoComSucesso();
+        void ErroAoCadastrarPedido(string mensagemErro);
+        void PedidoAlteradoComSucesso();
+        void ErroAoAlterarPedido(string mensagemErro);
+        void PedidoExcluidoComSucesso();
+        void ErroAoExcluirPedido(string mensagemErro);
+        void ListarPedidos(IEnumerable<Model.Pedido> pedidos);
+    }
+
+    public class PedidoView : IPedidoOutputPort
+    {
+        private readonly IPedidoInputPort _pedidoInputPort;
+
+        public PedidoView(IPedidoInputPort pedidoInputPort)
+        {
+            _pedidoInputPort = pedidoInputPort;
+        }
+
+        public void CadastrarPedido()
         {
             Console.WriteLine("Digite o Id do pedido:");
-            string PedidoId = Console.ReadLine();
+            string pedidoId = Console.ReadLine();
             Console.WriteLine("Digite a descrição do pedido:");
-            string Descricao = Console.ReadLine();
+            string descricao = Console.ReadLine();
             Console.WriteLine("Digite o nome do cliente:");
-            string Cliente = Console.ReadLine();
-            try{
-                Controller.Pedido.CadastrarPedido(PedidoId, Descricao, Cliente);
-                Console.WriteLine("Pedido cadastrado com sucesso");
-            }catch(Exception e)
-            {
-                Console.WriteLine($"Erro ao cadastrar o pedido: {e.Message}");
-            }
+            string cliente = Console.ReadLine();
+
+            _pedidoInputPort.CadastrarPedido(pedidoId, descricao, cliente);
         }
 
-        public static void AlterarPedido()
+        public void AlterarPedido()
         {
             Console.WriteLine("Digite o Id do pedido:");
-            string PedidoId = Console.ReadLine();
+            string pedidoId = Console.ReadLine();
             Console.WriteLine("Digite a descrição do pedido:");
-            string Descricao = Console.ReadLine();
+            string descricao = Console.ReadLine();
             Console.WriteLine("Digite o nome do cliente:");
-            string Cliente = Console.ReadLine();
-            try{
-                Controller.Pedido.AlterarPedido(PedidoId, Descricao, Cliente);
-                Console.WriteLine("Pedido alterado com sucesso");
-            }catch(Exception e)
-            {
-                Console.WriteLine($"Erro ao alterar o pedido: {e.Message}");
-            }
+            string cliente = Console.ReadLine();
+
+            _pedidoInputPort.AlterarPedido(pedidoId, descricao, cliente);
         }
 
-        public static void ExcluirPedido()
+        public void ExcluirPedido()
         {
-             Console.WriteLine("Digite o Id do pedido:");
-            string PedidoId = Console.ReadLine();
-            try{
-                Controller.Pedido.ExcluirPedido(PedidoId);
-                Console.WriteLine("Pedido excluído com sucesso");
-            }catch(Exception e)
-            {
-                Console.WriteLine($"Erro ao excluir o pedido: {e.Message}");
-            }
+            Console.WriteLine("Digite o Id do pedido:");
+            string pedidoId = Console.ReadLine();
+
+            _pedidoInputPort.ExcluirPedido(pedidoId);
         }
 
-        public static void ListarPedidos()
+        public void ListarPedidos()
+        {
+            _pedidoInputPort.ListarPedidos();
+        }
+
+        public void PedidoCadastradoComSucesso()
+        {
+            Console.WriteLine("Pedido cadastrado com sucesso");
+        }
+
+        public void ErroAoCadastrarPedido(string mensagemErro)
+        {
+            Console.WriteLine($"Erro ao cadastrar o pedido: {mensagemErro}");
+        }
+
+        public void PedidoAlteradoComSucesso()
+        {
+            Console.WriteLine("Pedido alterado com sucesso");
+        }
+
+        public void ErroAoAlterarPedido(string mensagemErro)
+        {
+            Console.WriteLine($"Erro ao alterar o pedido: {mensagemErro}");
+        }
+
+        public void PedidoExcluidoComSucesso()
+        {
+            Console.WriteLine("Pedido excluído com sucesso");
+        }
+
+        public void ErroAoExcluirPedido(string mensagemErro)
+        {
+            Console.WriteLine($"Erro ao excluir o pedido: {mensagemErro}");
+        }
+
+        public void ListarPedidos(IEnumerable<Model.Pedido> pedidos)
         {
             Console.WriteLine("Listar Pedidos");
-            foreach(Model.Pedido pedido in Controller.Pedido.ListarPedidos())
+            foreach (Model.Pedido pedido in pedidos)
             {
                 Console.WriteLine(pedido);
             }
