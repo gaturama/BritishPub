@@ -16,7 +16,7 @@ namespace View
         void ErroAoAlterarPedido(string mensagemErro);
         void PedidoExcluidoComSucesso();
         void ErroAoExcluirPedido(string mensagemErro);
-        void ListarPedidos(IEnumerable<Model.Pedido> pedidos);
+        void ListarPedidos(List<Model.Pedido> pedidos);
     }
 
     public class PedidoView : IPedidoOutputPort
@@ -60,11 +60,6 @@ namespace View
             _pedidoInputPort.ExcluirPedido(pedidoId);
         }
 
-        public void ListarPedidos()
-        {
-            _pedidoInputPort.ListarPedidos();
-        }
-
         public void PedidoCadastradoComSucesso()
         {
             Console.WriteLine("Pedido cadastrado com sucesso");
@@ -95,7 +90,7 @@ namespace View
             Console.WriteLine($"Erro ao excluir o pedido: {mensagemErro}");
         }
 
-        public void ListarPedidos(IEnumerable<Model.Pedido> pedidos)
+        public void ListarPedidos(List<Model.Pedido> pedidos)
         {
             Console.WriteLine("Listar Pedidos");
             foreach (Model.Pedido pedido in pedidos)

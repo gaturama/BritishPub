@@ -38,8 +38,31 @@ namespace Model
     {
         private List<Produto> Produtos { get; set; } = new List<Produto>();
 
-        public void SalvarProduto(Produto produto)
+        public Produto BuscarProduto(int produtoId)
         {
+            var produto = Pedidos.Find(p => p.ProdutoId == produtoId);
+            if (produto == null)
+            {
+                throw new Exception("Produto não encontrado");
+            }
+
+            return produto;
+        }
+
+        public void ExcluirProduto(int produtoId)
+        {
+            var produto = Produtos.Find(p => p.ProdutoId == produtoId);
+            if (produto == null)
+            {
+                throw new Exception("Produto não encontrado");
+            }
+
+            Produtos.Remove(produto);
+        }
+
+       public void SalvarProduto(Produto produto)
+        {
+            Produto produto = pedidos.Find(p => p.ProdutoId == produto.ProdutoId)
             if (produto == null)
             {
                 throw new ArgumentNullException(nameof(produto));
@@ -54,27 +77,6 @@ namespace Model
             Produtos.Add(produto);
         }
 
-        public void ExcluirProduto(int produtoId)
-        {
-            var produto = Produtos.Find(p => p.ProdutoId == produtoId);
-            if (produto == null)
-            {
-                throw new Exception("Produto não encontrado");
-            }
-
-            Produtos.Remove(produto);
-        }
-
-        public Produto BuscarProduto(int produtoId)
-        {
-            var produto = Produtos.Find(p => p.ProdutoId == produtoId);
-            if (produto == null)
-            {
-                throw new Exception("Produto não encontrado");
-            }
-
-            return produto;
-        }
 
         public List<Produto> ListarProdutos()
         {

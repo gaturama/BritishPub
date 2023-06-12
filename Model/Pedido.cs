@@ -5,10 +5,10 @@ namespace Model
 {
     public interface IPedidoRepository
     {
-        Pedido BuscarPedido(int pedidoId);
         void ExcluirPedido(int pedidoId);
         void SalvarPedido(Pedido pedido);
-        IEnumerable<Pedido> ListarPedidos();
+        Pedido BuscarPedido(int pedidoId);
+        List<Pedido> ListarPedidos();
     }
 
     public class Pedido
@@ -38,14 +38,14 @@ namespace Model
 
     public class PedidoRepository : IPedidoRepository
     {
-        private List<Pedido> pedidos = new List<Pedido>();
+        private List<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
         public Pedido BuscarPedido(int pedidoId)
         {
-            Pedido pedido = pedidos.Find(p => p.PedidoId == pedidoId);
+            var pedido = Pedidos.Find(p => p.PedidoId == pedidoId);
             if (pedido == null)
             {
-                throw new Exception("Pedido não encontrado");
+                throw new Exception("pedido não encontrado");
             }
 
             return pedido;
@@ -53,22 +53,32 @@ namespace Model
 
         public void ExcluirPedido(int pedidoId)
         {
-            Pedido pedido = BuscarPedido(pedidoId);
-            pedidos.Remove(pedido);
+            var pedido = Pedidos.Find(p => p.PedidoId == pedidoId);
+            if(pedido == null)
+            {
+                throw new Exception("Pedido não encontrado");
+            }
+            Pedidos.Remove(pedido);
         }
 
         public void SalvarPedido(Pedido pedido)
         {
-            Pedido pedidoExistente = pedidos.Find(p => p.PedidoId == pedido.PedidoId);
-            if (pedidoExistente != null)
+            Pedido pedido = pedidos.Find(p => p.PedidoId == pedido.PedidoId);
+            if (pedido == null)
             {
-                throw new Exception("O pedido já existe no repositório");
+                throw new Exception("Pedido não encontrado");
             }
 
-            pedidos.Add(pedido);
+            var pedidoExistente = Pedidos.Find(p => p.PedidoId == pedido.PedidoId);
+            if(pedidoExistente != null)
+            {
+                Pedido.Remove(pedidoExistente);
+            }
+
+            Pedidos.Add(pedido);
         }
 
-        public IEnumerable<Pedido> ListarPedidos()
+        public List<Pedido> ListarPedidos()
         {
             return pedidos;
         }
