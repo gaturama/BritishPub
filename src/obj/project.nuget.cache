@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QyWFhpQ02tHkPI9Q33IKjsJ6/vOfAM+oloCRgw2S+RanuMTTJu22hiiL5hRieed5tbwNQJCnxW0CPqO4eoQm7w==",
+  "dgSpecHash": "uX7WymMzCPx982JECBxAQ28B30irKYP4PdRv7hYEf3nwzFCH5VdpRtT2LmuyC8UYJbBl+d/+83PPiftn0/drmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
+  "projectFilePath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\DesignPattern-PortsAdapters.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

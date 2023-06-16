@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {}
+    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\DesignPattern-PortsAdapters.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {
+    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\DesignPattern-PortsAdapters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
+        "projectUniqueName": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\DesignPattern-PortsAdapters.csproj",
         "projectName": "DesignPattern-PortsAdapters",
-        "projectPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
+        "projectPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\DesignPattern-PortsAdapters.csproj",
         "packagesPath": "C:\\Users\\Barra Velha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\obj\\",
+        "outputPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Barra Velha\\AppData\\Roaming\\NuGet\\NuGet.Config"

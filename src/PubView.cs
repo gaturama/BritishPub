@@ -15,58 +15,61 @@ namespace PubApp
 
         public void ExibirMenu()
         {
-            Console.WriteLine("Bem-vindo ao PubApp!");
-            Console.WriteLine("1. Cadastrar cliente");
-            Console.WriteLine("2. Excluir cliente");
-            Console.WriteLine("3. Realizar pedido");
-            Console.WriteLine("4. Exibir clientes");
-            Console.WriteLine("5. Exibir pedidos");
+            Console.WriteLine("===========================");
+            Console.WriteLine("Bem-vindo ao PubApp!\n");
+            Console.WriteLine("1 - Cadastrar cliente");
+            Console.WriteLine("2 - Excluir cliente");
+            Console.WriteLine("3 - Realizar pedido");
+            Console.WriteLine("4 - Excluir pedido");
+            Console.WriteLine("5 - Exibir clientes");
+            Console.WriteLine("6 - Exibir pedidos");
             Console.WriteLine("0. Sair");
-            Console.WriteLine("Digite o número da opção desejada:");
+            Console.WriteLine("Opção:");
+            Console.WriteLine("===========================");
         }
 
         public void CadastrarCliente()
         {
             Console.WriteLine("Cadastro de Cliente");
-            Console.WriteLine("Digite o nome do cliente:");
+            Console.WriteLine("\nDigite o nome do cliente:");
             string nome = Console.ReadLine();
-            Console.WriteLine("Digite a idade do cliente:");
+            Console.WriteLine("\nDigite o telefone do cliente:");
             int telefone = int.Parse(Console.ReadLine());
             clienteService.CadastrarCliente(nome, telefone);
-            Console.WriteLine("Cliente cadastrado com sucesso!");
+            Console.WriteLine("\nCliente cadastrado com sucesso!");
         }
 
         public void ExcluirCliente()
         {
             Console.WriteLine("Exclusão de Cliente");
-            Console.WriteLine("Digite o ID do cliente a ser excluído:");
+            Console.WriteLine("\nDigite o ID do cliente:");
             int clienteId = int.Parse(Console.ReadLine());
             clienteService.ExcluirCliente(clienteId);
-            Console.WriteLine("Cliente excluído com sucesso!");
+            Console.WriteLine("\nCliente excluído com sucesso!");
         }
 
         public void RealizarPedido()
         {
             Console.WriteLine("Realização de Pedido");
-            Console.WriteLine("Digite o item:");
+            Console.WriteLine("\nDigite o item:");
             string item = Console.ReadLine();
-            Console.WriteLine("Digite a quantidade:");
+            Console.WriteLine("\nDigite a quantidade:");
             int quantidade = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor total:");
+            Console.WriteLine("\nDigite o valor total:");
             decimal valorTotal = decimal.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o ID do cliente:");
+            Console.WriteLine("\nDigite o ID do cliente:");
             int clienteId = int.Parse(Console.ReadLine());
             pedidoService.RealizarPedido(item, quantidade, valorTotal, clienteId);
-            Console.WriteLine("Pedido realizado com sucesso!");
+            Console.WriteLine("\nPedido realizado com sucesso!");
         }
 
         public void ExcluirPedido()
         {
             Console.WriteLine("Exclusão de Pedido");
-            Console.WriteLine("Digite o ID do pedido a ser excluído:");
+            Console.WriteLine("\nDigite o ID do pedido:");
             int pedidoId = int.Parse(Console.ReadLine());
             clienteService.ExcluirCliente(pedidoId);
-            Console.WriteLine("Pedido excluído com sucesso!");
+            Console.WriteLine("\nPedido excluído com sucesso!");
         }
 
         public void ExibirClientes()

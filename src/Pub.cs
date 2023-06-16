@@ -36,7 +36,7 @@ namespace PubApp
                         pubView.ExibirPedidos();
                         break;
                     case 0:
-                        Console.WriteLine("Obrigado por utilizar o PubApp! Até logo.");
+                        Console.WriteLine("Obrigado por utilizar o British Pub App!");
                         break;
                     default:
                         Console.WriteLine("Opção inválida. Por favor, tente novamente.");
