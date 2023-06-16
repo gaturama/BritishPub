@@ -1,5 +1,5 @@
 <h1>Design Patterns - Ports & Adapters</h1>
-<p>Este projeto está sendo desenvolvido utilizando método MVC com C#, e tem como objetivo oferecer um sistema para Pub's.</p>
+<p>Este projeto está sendo desenvolvido utilizando método de Design Pattern: Ports and Adapters com C#, e tem como objetivo oferecer um sistema para Pub's.</p>
 
 <h2>📝 Instruções</h2>
 <p>As informações a seguir, irão lhe permitir obter uma replica deste projeto em seu Notebook ou PC, com intuito de você usuário, testar e aplicar novas funcionalidades a partir de suas ideias.</p>
