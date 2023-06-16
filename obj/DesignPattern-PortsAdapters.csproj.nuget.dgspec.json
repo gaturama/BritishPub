@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Public\\Downloads\\OneDriveB5-F7FBF4FBCEF5}\\Área de Trabalho\\faculdade\\PortsAndAdapters\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {}
+    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Public\\Downloads\\OneDriveB5-F7FBF4FBCEF5}\\Área de Trabalho\\faculdade\\PortsAndAdapters\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {
+    "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Public\\Downloads\\OneDriveB5-F7FBF4FBCEF5}\\Área de Trabalho\\faculdade\\PortsAndAdapters\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
+        "projectUniqueName": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
         "projectName": "DesignPattern-PortsAdapters",
-        "projectPath": "C:\\Users\\Public\\Downloads\\OneDriveB5-F7FBF4FBCEF5}\\Área de Trabalho\\faculdade\\PortsAndAdapters\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
-        "packagesPath": "C:\\Users\\gabriel oliveira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Public\\Downloads\\OneDriveB5-F7FBF4FBCEF5}\\Área de Trabalho\\faculdade\\PortsAndAdapters\\DesignPattern-PortsAdapters\\obj\\",
+        "projectPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\DesignPattern-PortsAdapters.csproj",
+        "packagesPath": "C:\\Users\\Barra Velha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barra Velha\\Documents\\Design\\DesignPattern-PortsAdapters\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gabriel oliveira\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Barra Velha\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

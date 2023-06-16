@@ -27,7 +27,7 @@ class Program
                         pubView.ExibirPedidos();
                         break;
                     case 0:
-                        Console.WriteLine("Obrigado por utilizar o British Pub! Até logo.");
+                        Console.WriteLine("Obrigado por escolher o British Pub!");
                         break;
                     default:
                         Console.WriteLine("Opção inválida. Por favor, tente novamente.");

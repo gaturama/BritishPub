@@ -21,6 +21,20 @@ namespace Controllers
             pedidoId++;
         }
 
+        public void ExcluirPedido(int pedidoId)
+        {
+            Pedido pedido = pedidos.Find(c => c.PedidoId == pedidoId);
+            if (pedido != null)
+            {
+                pedidos.Remove(pedido);
+                Console.WriteLine("Cliente excluído com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Cliente não encontrado");
+            }
+        }
+        
         public List<Pedido> ObterPedidos()
         {
             return pedidos;

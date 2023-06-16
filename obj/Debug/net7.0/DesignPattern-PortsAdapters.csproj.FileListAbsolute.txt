@@ -3,3 +3,18 @@ C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\P
 C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfoInputs.cache
 C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfo.cs
 C:\Users\Public\Downloads\OneDriveB5-F7FBF4FBCEF5}\Área de Trabalho\faculdade\PortsAndAdapters\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.CoreCompileInputs.cache
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\bin\Debug\net7.0\DesignPattern-PortsAdapters.exe
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\bin\Debug\net7.0\DesignPattern-PortsAdapters.deps.json
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\bin\Debug\net7.0\DesignPattern-PortsAdapters.runtimeconfig.json
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\bin\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\bin\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.AssemblyReference.cache
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfoInputs.cache
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfo.cs
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.CoreCompileInputs.cache
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\refint\DesignPattern-PortsAdapters.dll
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\DesignPattern-PortsAdapters.genruntimeconfig.cache
+C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\obj\Debug\net7.0\ref\DesignPattern-PortsAdapters.dll
