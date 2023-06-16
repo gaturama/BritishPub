@@ -1,60 +1,40 @@
-namespace Program
-{
-    public class Pub
+using View;
+
+namespace Pub{
+
+class Program
     {
-        public static void Main(string[]args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("British Pub");
-            int op = 0;
-
-            do
+            PubView pubView = new PubView();
+            int opcao = -1;
+            while (opcao != 0)
             {
-                Console.WriteLine("=========================");
-                Console.WriteLine("1 - Cadastrar Pedido");
-                Console.WriteLine("2 - Alterar Pedido");
-                Console.WriteLine("3 - Excluir Pedido");
-                Console.WriteLine("4 - Listar Pedidos");
-                Console.WriteLine("5 - Cadastrar Produto");
-                Console.WriteLine("6 - Alterar Produto");
-                Console.WriteLine("7 - Excluir Produto");
-                Console.WriteLine("8 - Listar Produtos");
-                Console.WriteLine("0 - Sair");
-                Console.WriteLine("=========================");
-
-                switch(op)
+                pubView.Menu();
+                opcao = int.Parse(Console.ReadLine());
+                switch (opcao)
                 {
-                    case 0:
-                        Console.WriteLine("Até mais :)");
-                        break;
                     case 1:
-                        View.Pedido.CadastrarPedido();
-                        break; 
+                        pubView.CadastrarCliente();
+                        break;
                     case 2:
-                        View.Pedido.AlterarPedido();
+                        pubView.RealizarPedido();
                         break;
                     case 3:
-                        View.Pedido.ExcluirPedido();
+                        pubView.ExibirClientes();
                         break;
                     case 4:
-                        View.Pedido.ListarPedidos();
+                        pubView.ExibirPedidos();
                         break;
-                    case 5:
-                        View.Produto.CadastrarProduto();
-                        break;
-                    case 6: 
-                        View.Produto.AlterarProduto();
-                        break;
-                    case 7:
-                        View.Produto.ExcluirProduto();
-                        break;
-                    case 8:
-                        View.Produto.ListarProdutos();
+                    case 0:
+                        Console.WriteLine("Obrigado por utilizar o British Pub! Até logo.");
                         break;
                     default:
-                        Console.WriteLine("Opção Inválida");
-                        break;                                  
+                        Console.WriteLine("Opção inválida. Por favor, tente novamente.");
+                        break;
                 }
-            }while(op != 0);
+                Console.WriteLine();
+            }
         }
     }
 }
