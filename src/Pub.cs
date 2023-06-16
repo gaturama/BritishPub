@@ -30,9 +30,12 @@ namespace PubApp
                         pubView.RealizarPedido();
                         break;
                     case 4:
-                        pubView.ExibirClientes();
+                        pubView.ExcluirPedido();
                         break;
                     case 5:
+                        pubView.ExibirClientes();
+                        break;
+                    case 6:
                         pubView.ExibirPedidos();
                         break;
                     case 0:
