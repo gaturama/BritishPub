@@ -1,4 +1,4 @@
-<h1>Design Patterns - Ports & Adapters</h1>
+<h1>British Pub</h1>
 <p>Este projeto está sendo desenvolvido utilizando métodos MVC e CRUD com C#, e tem como objetivo oferecer um sistema para gerenciar Pub's.</p>
 
 <h2>📝 Instruções</h2>
