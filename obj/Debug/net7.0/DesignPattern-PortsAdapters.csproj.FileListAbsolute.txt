@@ -33,3 +33,33 @@ C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\src\obj\Debug\
 C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.pdb
 C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.genruntimeconfig.cache
 C:\Users\Barra Velha\Documents\Design\DesignPattern-PortsAdapters\src\obj\Debug\net7.0\ref\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\bin\Debug\net7.0\DesignPattern-PortsAdapters.exe
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\bin\Debug\net7.0\DesignPattern-PortsAdapters.deps.json
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\bin\Debug\net7.0\DesignPattern-PortsAdapters.runtimeconfig.json
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\bin\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\bin\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.AssemblyReference.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfoInputs.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfo.cs
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\refint\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\DesignPattern-PortsAdapters.genruntimeconfig.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\src\obj\Debug\net7.0\ref\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\bin\Debug\net7.0\DesignPattern-PortsAdapters.exe
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\bin\Debug\net7.0\DesignPattern-PortsAdapters.deps.json
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\bin\Debug\net7.0\DesignPattern-PortsAdapters.runtimeconfig.json
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\bin\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\bin\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.AssemblyReference.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfoInputs.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.AssemblyInfo.cs
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\refint\DesignPattern-PortsAdapters.dll
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.pdb
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\DesignPattern-PortsAdapters.genruntimeconfig.cache
+C:\Users\gabriel.oliveira20\Documents\PUB\BritishPub\obj\Debug\net7.0\ref\DesignPattern-PortsAdapters.dll
