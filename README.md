@@ -22,7 +22,7 @@
 <ul>
     <li>Linguagem de Programação: C#</li>
     <li>Visual Studio Code: IDE para desenvolvimento da aplicação</li>
-    <li>MVC: método Model | View | Controller</li>
+    <li>Design Pattern: Ports and Adapters</li>
 </ul> 
 
 <h3>✒️ Autor</h3>
