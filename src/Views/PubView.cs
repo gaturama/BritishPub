@@ -24,13 +24,13 @@ namespace PubApp
             Console.WriteLine("5 - Exibir clientes");
             Console.WriteLine("6 - Exibir pedidos");
             Console.WriteLine("0. Sair");
-            Console.WriteLine("Opção:");
             Console.WriteLine("===========================");
+            Console.WriteLine("Opção:");
         }
 
         public void CadastrarCliente()
         {
-            Console.WriteLine("Cadastro de Cliente");
+            Console.WriteLine("\nCadastro de Cliente");
             Console.WriteLine("\nDigite o nome do cliente:");
             string nome = Console.ReadLine();
             Console.WriteLine("\nDigite o telefone do cliente:");
