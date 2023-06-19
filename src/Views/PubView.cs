@@ -1,19 +1,16 @@
 using Controllers;
-using Data;
 
 namespace Views
 {
     public class PubView
     {
-        private Context dbContext;
         private ClienteService clienteService;
         private PedidoService pedidoService;
 
-        public PubView(ClienteService clienteService, PedidoService pedidoService, Context dbContext)
+        public PubView(ClienteService clienteService, PedidoService pedidoService)
         {
             this.clienteService = clienteService;
             this.pedidoService = pedidoService;
-            this.dbContext = dbContext;
         }
 
         public void ExibirMenu()

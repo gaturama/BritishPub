@@ -10,6 +10,7 @@ namespace Controllers
         public ClienteService(IClienteRepository clienteRepository)
         {
             this.clienteRepository = clienteRepository;
+
         }
 
         public void CadastrarCliente(string nome, string telefone)
@@ -31,5 +32,6 @@ namespace Controllers
         {
             return clienteRepository.ObterClientes();
         }
+        
     }
 }
