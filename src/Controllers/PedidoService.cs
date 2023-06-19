@@ -1,6 +1,7 @@
-using System.Collections.Generic;
+using Models;
+using Interface;
 
-namespace PubApp
+namespace Controllers
 {
     public class PedidoService
     {
@@ -29,6 +30,11 @@ namespace PubApp
             }
         }
 
+        public void ExcluirPedido(int pedidoId)
+        {
+            pedidoRepository.ExcluirPedido(pedidoId);
+        }
+        
         public List<Pedido> ObterPedidos()
         {
             return pedidoRepository.ObterPedidos();

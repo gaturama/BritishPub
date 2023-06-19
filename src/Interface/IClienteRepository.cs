@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Models;
 
-namespace PubApp
+namespace Interface
 {
     public interface IClienteRepository
     {

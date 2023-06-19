@@ -1,6 +1,7 @@
-using System.Collections.Generic;
+using Models;
+using Interface;
 
-namespace PubApp
+namespace Controllers
 {
     public class ClienteService
     {

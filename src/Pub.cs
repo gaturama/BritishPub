@@ -1,4 +1,6 @@
-using System;
+using Views;
+using Controllers;
+using Interface;
 
 namespace PubApp
 {
@@ -13,7 +15,7 @@ namespace PubApp
             PedidoService pedidoService = new PedidoService(pedidoRepository, clienteRepository);
 
             PubView pubView = new PubView(clienteService, pedidoService);
-            int opcao = -1;
+            int opcao = 0;
             while (opcao != 0)
             {
                 pubView.ExibirMenu();
@@ -39,10 +41,10 @@ namespace PubApp
                         pubView.ExibirPedidos();
                         break;
                     case 0:
-                        Console.WriteLine("Obrigado por utilizar o British Pub App!");
+                        Console.WriteLine("Até mais!");
                         break;
                     default:
-                        Console.WriteLine("Opção inválida. Por favor, tente novamente.");
+                        Console.WriteLine("Opção inválida.");
                         break;
                 }
                 Console.WriteLine();

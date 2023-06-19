@@ -1,4 +1,5 @@
-using System.Collections.Generic;
+using Models;
+using Interface;
 
 namespace PubApp
 {
@@ -10,12 +11,6 @@ namespace PubApp
         {
             pedidos.Add(pedido);
         }
-
-        public List<Pedido> ObterPedidos()
-        {
-            return pedidos;
-        }
-
         public void ExcluirPedido(int pedidoId)
         {
             Pedido pedido = pedidos.Find(c => c.PedidoId == pedidoId);
@@ -24,5 +19,11 @@ namespace PubApp
                 pedidos.Remove(pedido);
             }
         }
+
+        public List<Pedido> ObterPedidos()
+        {
+            return pedidos;
+        }
+
     }
 }

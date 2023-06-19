@@ -1,4 +1,4 @@
-namespace PubApp
+namespace Models
 {
     public class Cliente
     {

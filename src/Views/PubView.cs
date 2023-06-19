@@ -1,6 +1,8 @@
-using System;
+using Interface;
+using Models;
+using Controllers;
 
-namespace PubApp
+namespace Views
 {
     public class PubView
     {
