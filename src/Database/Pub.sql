@@ -1,0 +1,25 @@
+CREATE SCHEMA IF NOT EXISTS `Pub` DEFAULT CHARACTER SET utf8;
+USE `Pub`;
+
+CREATE TABLE IF NOT EXISTS `Pub`.`Cliente` (
+`ClienteId` INT NOT NULL AUTO_INCREMENT,
+`Nome` VARCHAR(250) NOT NULL,
+`Telefone` VARCHAR(11) NOT NULL,
+PRIMARY KEY (`ClienteId`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `Pub`.`Pedido` (
+`PedidoId` INT NOT NULL AUTO_INCREMENT,
+`Item` VARCHAR(200) NOT NULL,
+`Quantidade` INT NOT NULL,
+`Valor` DECIMAL NOT NULL,
+`ClienteId` INT NOT NULL,
+PRIMARY KEY (`PedidoId`, `ClienteId`),
+INDEX `fk_Pedido_Cliente_idx` (`ClienteId` ASC),
+CONSTRAINT `fk_Pedido_Cliente`
+	FOREIGN KEY (`ClienteId`)
+    REFERENCES `Pub`.`Cliente` (`ClienteId`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+    

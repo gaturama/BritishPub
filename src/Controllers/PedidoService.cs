@@ -14,7 +14,7 @@ namespace Controllers
             this.clienteRepository = clienteRepository;
         }
 
-        public void RealizarPedido(string item, int quantidade, decimal valorTotal, int clienteId)
+        public void RealizarPedido(string item, int quantidade, decimal valor, int clienteId)
         {
             Cliente cliente = clienteRepository.ObterClientes().Find(c => c.ClienteId == clienteId);
             if (cliente != null)
@@ -23,7 +23,7 @@ namespace Controllers
                 {
                     Item = item,
                     Quantidade = quantidade,
-                    ValorTotal = valorTotal,
+                    Valor = valor,
                     Cliente = cliente
                 };
                 pedidoRepository.AdicionarPedido(pedido);

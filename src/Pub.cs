@@ -1,6 +1,7 @@
 using Views;
 using Controllers;
 using Interface;
+using Data;
 
 namespace PubApp
 {
@@ -14,8 +15,10 @@ namespace PubApp
             ClienteService clienteService = new ClienteService(clienteRepository);
             PedidoService pedidoService = new PedidoService(pedidoRepository, clienteRepository);
 
-            PubView pubView = new PubView(clienteService, pedidoService);
-            int opcao = 0;
+            Context DbContext = new Context();
+            
+            PubView pubView = new PubView(clienteService, pedidoService, DbContext);
+            int opcao = -1;
             while (opcao != 0)
             {
                 pubView.ExibirMenu();
@@ -47,8 +50,8 @@ namespace PubApp
                         Console.WriteLine("Opção inválida.");
                         break;
                 }
-                Console.WriteLine();
             }
+            Console.WriteLine();
         }
     }
 }

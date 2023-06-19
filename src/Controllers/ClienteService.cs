@@ -12,7 +12,7 @@ namespace Controllers
             this.clienteRepository = clienteRepository;
         }
 
-        public void CadastrarCliente(string nome, int telefone)
+        public void CadastrarCliente(string nome, string telefone)
         {
             Cliente cliente = new Cliente
             {

@@ -1,18 +1,19 @@
-using Interface;
-using Models;
 using Controllers;
+using Data;
 
 namespace Views
 {
     public class PubView
     {
+        private Context dbContext;
         private ClienteService clienteService;
         private PedidoService pedidoService;
 
-        public PubView(ClienteService clienteService, PedidoService pedidoService)
+        public PubView(ClienteService clienteService, PedidoService pedidoService, Context dbContext)
         {
             this.clienteService = clienteService;
             this.pedidoService = pedidoService;
+            this.dbContext = dbContext;
         }
 
         public void ExibirMenu()
@@ -34,10 +35,10 @@ namespace Views
         {
             Console.WriteLine("\nCadastro de Cliente");
             Console.WriteLine("\nDigite o nome do cliente:");
-            string nome = Console.ReadLine();
+            string Nome = Console.ReadLine();
             Console.WriteLine("\nDigite o telefone do cliente:");
-            int telefone = int.Parse(Console.ReadLine());
-            clienteService.CadastrarCliente(nome, telefone);
+            string Telefone = Console.ReadLine();
+            clienteService.CadastrarCliente(Nome, Telefone);
             Console.WriteLine("\nCliente cadastrado com sucesso!");
         }
 
@@ -58,10 +59,10 @@ namespace Views
             Console.WriteLine("\nDigite a quantidade:");
             int quantidade = int.Parse(Console.ReadLine());
             Console.WriteLine("\nDigite o valor total:");
-            decimal valorTotal = decimal.Parse(Console.ReadLine());
+            decimal valor = decimal.Parse(Console.ReadLine());
             Console.WriteLine("\nDigite o ID do cliente:");
             int clienteId = int.Parse(Console.ReadLine());
-            pedidoService.RealizarPedido(item, quantidade, valorTotal, clienteId);
+            pedidoService.RealizarPedido(item, quantidade, valor, clienteId);
             Console.WriteLine("\nPedido realizado com sucesso!");
         }
 
@@ -80,7 +81,7 @@ namespace Views
             var clientes = clienteService.ObterClientes();
             foreach (var cliente in clientes)
             {
-                Console.WriteLine($"ID: {cliente.ClienteId}, Nome: {cliente.Nome}, Telefone: {cliente.Telefone}");
+                Console.WriteLine($"\nID: {cliente.ClienteId}, \nNome: {cliente.Nome}, \nTelefone: {cliente.Telefone}");
             }
         }
 
@@ -90,7 +91,7 @@ namespace Views
             var pedidos = pedidoService.ObterPedidos();
             foreach (var pedido in pedidos)
             {
-                Console.WriteLine($"ID: {pedido.PedidoId}, Item: {pedido.Item}, Quantidade: {pedido.Quantidade}, Valor Total: {pedido.ValorTotal}, Cliente: {pedido.Cliente.Nome}");
+                Console.WriteLine($"\nID: {pedido.PedidoId}, \nItem: {pedido.Item}, \nQuantidade: {pedido.Quantidade}, \nValor Total: {pedido.Valor}, \nCliente: {pedido.Cliente.Nome}");
             }
         }
     }
